@@ -1,8 +1,8 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from "typeorm";
-import {Extraction} from '../extraction',
-import { Shift } from './shift.entity';
-import { SafetyReport } from './safety-report.entity';
-import { ProductionStatus } from './production-status.entity';
+import { Extraction } from "src/extraction/extraction.entity";
+import { Shift } from "src/shift/shift.entity";
+import { SafetyReport } from "src/safety-report/safety-report.entity";
+import { ProductionStatus } from "src/production-status/production-status.entity";
 
 @Entity('mine_sites')
 export class MineSite {
