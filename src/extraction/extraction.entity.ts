@@ -1,13 +1,13 @@
 import { Entity,  PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from "typeorm";
-import { MineSites } from "src/mine-sites/mine-site.entity";
+import { MineSite } from "src/mine-sites/mine-site.entity";
 
 @Entity('extractions')
 export class Extraction {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @ManyToOne(() => MineSites, (mineSite) => mineSite.extractions, {onDelete: 'CASCADE'})
-    mineSite: MineSites;
+    @ManyToOne(() => MineSite, (mineSite) => mineSite.extractions, {onDelete: 'CASCADE'})
+    mineSite: MineSite;
 
     @Column({type: 'varchar', length: 100})
     mineral_type: string;

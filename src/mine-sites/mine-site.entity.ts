@@ -5,7 +5,7 @@ import { SafetyReport } from './safety-report.entity';
 import { ProductionStatus } from './production-status.entity';
 
 @Entity('mine_sites')
-export class MineSites {
+export class MineSite {
     @PrimaryGeneratedColumn()
     id: number;
 
